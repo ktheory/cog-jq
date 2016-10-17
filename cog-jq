@@ -1,0 +1,6 @@
+#!/bin/sh
+
+set -e
+
+# Set the cog argument as the filter (default: '.')
+exec /usr/bin/jq "$COG_ARGV_1"
