@@ -5,7 +5,7 @@ version: "0.1"
 cog_bundle_version: 3
 docker:
   image: "ktheory/cog-jq"
-  tag: "0.1"
+  tag: "latest"
 commands:
   jq:
     executable: /usr/bin/cog-jq
