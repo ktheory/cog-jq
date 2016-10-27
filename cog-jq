@@ -1,6 +1,14 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 set -e
 
 # Set the cog argument as the filter (default: '.')
-exec /usr/bin/jq "$COG_ARGV_0"
+RESULT=$(/usr/bin/jq "$COG_ARGV_0")
+
+# Emit JSON if the output sorta looks like JSON
+if [[ "$RESULT" == "{"* ]] || [[ "$RESULT" == "["* ]]; then
+  echo "JSON"
+fi
+
+# Emit results from running jq
+echo "$RESULT"
