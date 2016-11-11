@@ -3,11 +3,11 @@
 cog_bundle_version: 4
 
 name: jq
-version: "0.1.1"
+version: "0.3.0"
 description: Wrapper for jq, a lightweight and flexible JSON processor
 docker:
   image: "ktheory/cog-jq"
-  tag: "v0.1.1"
+  tag: "v0.3.0"
 commands:
   jq:
     executable: /usr/bin/cog-jq
